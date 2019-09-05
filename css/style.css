@@ -23,7 +23,7 @@ body {
     height: 100%;
 }
 
-.main-divs {
+.main-divs, .tab-content {
     height: inherit;
     overflow: hidden;
     position: relative;
@@ -57,9 +57,8 @@ body {
 }
 
 /* ---------------------------------------------
-        Animation 1
+        Square bubbles
 --------------------------------------------- */
-
 #squares {
     background-color: #f6bf9f;
 }
@@ -82,4 +81,17 @@ body {
         bottom: 130%;
         transform: rotate(-190deg);
     }
+}
+
+/* ---------------------------------------------
+        Maniac
+--------------------------------------------- */
+#maniac {
+    background-color: #ffffff;
+}
+
+#maniac .container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }

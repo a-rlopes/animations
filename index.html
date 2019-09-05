@@ -15,27 +15,26 @@
         <div class="container">
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                  <a class="nav-link active" data-toggle="pill" href="#squares">Square bubbles</a>
+                  <a class="nav-link active" data-toggle="tab" href="#squares" role="tab" aria-controls="nav-profile" aria-selected="true">Square bubbles</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="pill" href="#">Link</a>
+                  <a class="nav-link" data-toggle="tab" href="#maniac" role="tab" aria-controls="nav-profile" aria-selected="false">Maniac</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="pill" href="#">Link</a>
+                  <a class="nav-link" data-toggle="tab" href="#" role="tab" aria-controls="nav-profile" aria-selected="false">Link</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="pill" href="#">Disabled</a>
+                  <a class="nav-link" data-toggle="tab" href="#" role="tab" aria-controls="nav-profile" aria-selected="false">Disabled</a>
                 </li>
             </ul>        
         </div>
-        <div id="squares" class="main-divs">
-            <ul id="box-area">
-            </ul>
-        </div>
-        <div id="maniac" class="main-divs">
-          <div class="container">
-            
-          </div>
+        <div class="tab-content">
+            <div id="squares" class="main-divs tab-pane active" data-anim="1">
+              <ul id="box-area"></ul>
+            </div>
+            <div id="maniac" class="main-divs d-flex justify-content-center tab-pane" data-anim="2">
+              <div class="container"></div>
+            </div>
         </div>
     </div>
     <!-- Scripts -->
