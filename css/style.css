@@ -1,0 +1,56 @@
+/* https://www.color-hex.com/color-palette/82341 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+a:hover, a:active, a:focus, .btn:focus, button:focus, input:focus, textarea:focus {
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--blue);
+    background-color: var(--white);
+    height: 100%;
+}
+
+#main {
+    height: 100vh;
+    background-color: #c1e8ce;
+    padding: 0;
+}
+
+.nav-item {
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 0.4em 0.2rem;
+}
+
+.nav-link.active {
+    color: #262e29;
+}
+
+.nav-link:hover {
+    color: #607467;
+}
+
+.nav-link {
+    color: 	#c1e8ce;
+    text-transform: lowercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#squares {
+    background-color: #f6bf9f;
+    height: inherit;
+}
