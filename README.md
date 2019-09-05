@@ -1,2 +1,2 @@
-# pure-css-animations
-pure css animations
+# animations
+Css and JS animations
