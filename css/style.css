@@ -24,15 +24,17 @@ body {
 }
 
 .main-divs, .tab-content {
-    height: inherit;
+    height: 96%;
     overflow: hidden;
     position: relative;
+    width: 100%;
 }
 
 #main {
     background-color: #c1e8ce;
     height: 100vh;
     padding: 0;
+    overflow: hidden;
 }
 
 .nav-item {
@@ -92,8 +94,18 @@ body {
 }
 
 #anim1 .container{
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
     background-color: #607467;
+}
+
+/* ---------------------------------------------
+        Concentric Squares
+--------------------------------------------- */
+.c-square {
+    height: -webkit-fill-available;
+    padding: 4%;
+    width: 100%;
+    position: relative;
 }

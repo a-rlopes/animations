@@ -1,35 +1,52 @@
 $(function() {
+    colors = ['#f4eda7', '#f6bf9f', '#fec5ce', '#d4bcd9', '#c1e8ce', '#f4eda7'];
+
     RecursiveSquares();
     curAnim = 0;
-    stop1 = stop2 = false;
+    stop0 = stop1 = stop2 =false;
 
-    for(let i = 0; i<2; i++){
-        $('#toogleAnim' + i).on('click', () => {
-            ToogleAnimation(i)
+    for(let i = 0; i<3; i++){
+        $('#toggleAnim' + i).on('click', () => {
+            ToggleAnimation(i)
         });
     }
 });
 
 
-function ToogleAnimation(animation){
-    if(animation !== curAnim){
+function ToggleAnimation(animation){
+    if(animation != curAnim){
         switch(curAnim){
             case 0:
-                stop1 = true;
+                stop0 = true;
                 break;
             case 1:
+                stop1 = true;
+                break;
+            case 2:
                 stop2 = true;
                 break;
+            default:
+                stop0 = stop1 = stop2 =false;
         }
 
         switch(animation){
             case 0:
-                RecursiveSquares(stop1);
+                stop0 = false;
+                $('#box-area').html('');
+                RecursiveSquares(stop0);
                 break;
             case 1:
-                ManiacDiv(stop2);
+                stop1 = false;
+                //ManiacDiv(stop1,0);
                 break;
+            case 2:
+                stop2 = false;
+                ConcentricSquares(stop2,0);
+                break;
+            default:
+                stop0 = stop1 = stop2 = false;
         }
+        curAnim = animation;
     }
 }
 
@@ -53,12 +70,11 @@ function RecursiveSquares(stop) {
     }
     randomDelay = Math.floor(Math.random()*500);
     setTimeout(() => {
-        RecursiveSquares();
+        RecursiveSquares(stop0);
     },randomDelay);
 }
 
 function ManiacDiv(stop) {
-    colors = ['#f4eda7', '#f6bf9f', '#fec5ce', '#d4bcd9', '#c1e8ce'];
     randomColor = colors[Math.floor(Math.random()*5)];
     /*
     random1 = Math.floor(Math.random()*100);
@@ -80,6 +96,31 @@ function ManiacDiv(stop) {
         return;
     }
     setTimeout(() => {
-        ManiacDiv();
+        ManiacDiv(stop1);
+    },500);
+}
+
+function ConcentricSquares(stop, n) {
+
+    for(let i = 0; i<6; i++){
+        if(i+n < 6) {
+            c = i+n;
+        } else {
+            c = (i + n) - 5;
+        }
+
+        $('.c' + i).css({'background-color':colors[c]});
+    }
+
+    if(stop){
+        return;
+    }
+
+    n++;
+    if(n==6){
+        n=0;
+    }
+    setTimeout(() => {
+        ConcentricSquares(stop2, n);
     },500);
 }
