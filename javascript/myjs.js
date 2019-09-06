@@ -1,5 +1,5 @@
 $(function() {
-    colors = ['#f4eda7', '#f6bf9f', '#fec5ce', '#d4bcd9', '#c1e8ce', '#f4eda7'];
+    colors = ['#f4eda7', '#f6bf9f', '#fec5ce', '#d4bcd9', '#c1e8ce'];
 
     RecursiveSquares();
     curAnim = 0;
@@ -101,9 +101,8 @@ function ManiacDiv(stop) {
 }
 
 function ConcentricSquares(stop, n) {
-
-    for(let i = 0; i<6; i++){
-        if(i+n < 6) {
+    for(let i = 0; i<5; i++){
+        if(i+n < 5) {
             c = i+n;
         } else {
             c = (i + n) - 5;
@@ -117,7 +116,7 @@ function ConcentricSquares(stop, n) {
     }
 
     n++;
-    if(n==6){
+    if(n==5){
         n=0;
     }
     setTimeout(() => {

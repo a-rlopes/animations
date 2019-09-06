@@ -105,8 +105,14 @@ body {
 --------------------------------------------- */
 .c-square {
     height: -webkit-fill-available;
-    padding: 4%;
+    padding: 1.4em;
     width: 100%;
     position: relative;
     border-radius: 2%;
+}
+
+@media screen and (max-width: 600px) {
+    .c-square{
+        padding: 1em;
+    }
 }
