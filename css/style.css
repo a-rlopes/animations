@@ -59,7 +59,7 @@ body {
 /* ---------------------------------------------
         Square bubbles
 --------------------------------------------- */
-#squares {
+#anim0 {
     background-color: #f6bf9f;
 }
 
@@ -71,6 +71,7 @@ body {
     border-radius: 5%;
     animation-name: rotate-up;
     animation-duration: 6000ms;
+    animation-timing-function: ease-in
 }
 
 @keyframes rotate-up {
@@ -86,12 +87,13 @@ body {
 /* ---------------------------------------------
         Maniac
 --------------------------------------------- */
-#maniac {
+#anim1 {
     background-color: #ffffff;
 }
 
-#maniac .container{
+#anim1 .container{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    background-color: #607467;
 }
