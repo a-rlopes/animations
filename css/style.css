@@ -65,7 +65,7 @@ body {
     background-color: #f6bf9f;
 }
 
-#box-area li {
+#anim0 #box-area li {
     background-color: #ffffff;
     position: absolute;
     bottom: 0;
@@ -93,12 +93,25 @@ body {
     background-color: #ffffff;
 }
 
-#anim1 .container{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #607467;
+#anim1 #box-area li {
+    position: absolute;
+    bottom: -50%;
+    list-style-type: none;
+    border-radius: 50%;
+    animation-name: up;
+    animation-duration: 6000ms;
+    animation-timing-function: ease-in
 }
+
+@keyframes up {
+    0%   {
+        bottom:-50%;
+    }
+    100% {
+        bottom: 130%;
+    }
+}
+ 
 
 /* ---------------------------------------------
         Concentric Squares
@@ -110,6 +123,10 @@ body {
     position: relative;
     border-radius: 2%;
 }
+
+/* ---------------------------------------------
+        Illusion
+--------------------------------------------- */
 
 @media screen and (max-width: 600px) {
     .c-square{
